@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    tools:context=".MainActivity"
+    android:baselineAligned="false"
+    android:gravity="left|center_vertical|start"
+    android:layout_alignParentRight="false"
+    android:layout_alignParentLeft="true"
+    android:textAlignment="gravity">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:text="hello_world"
+        android:textSize="14sp"
+        android:textStyle="bold" >
+    </TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black" />
+
+</LinearLayout>

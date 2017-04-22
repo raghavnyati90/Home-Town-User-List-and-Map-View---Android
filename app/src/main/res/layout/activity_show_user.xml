@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_show_user"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.sdu.rnyati.assignment4.ShowUserActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id ="@+id/fragment_holder"
+        android:layout_below="@+id/countryFilter"
+        android:layout_marginTop="45dp"
+        android:layout_alignParentStart="true">
+
+    </FrameLayout>
+
+
+    <Spinner
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/countryFilter"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textSize="5dp"
+        tools:ignore="RtlHardcoded" />
+
+    <Spinner
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/stateFilter"
+        android:layout_marginRight="5dp"
+        android:layout_alignTop="@+id/countryFilter"
+        android:layout_toEndOf="@+id/countryFilter"
+        android:textSize="5dp"
+        tools:ignore="RtlHardcoded" />
+
+    <Spinner
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/yearFilter"
+        android:layout_above="@+id/fragment_holder"
+        android:textSize="5dp"
+        android:layout_toEndOf="@+id/stateFilter" />
+
+
+
+    <Button
+        android:text="Apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reset"
+        android:onClick="onApplyFilter"
+        android:layout_below="@+id/yearFilter"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/yearFilter" />
+
+    <TextView
+        android:text="Filter not applied."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/countryFilter"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp"
+        android:id="@+id/filterText"
+        android:layout_alignEnd="@+id/stateFilter"
+        android:textAlignment="viewStart" />
+
+
+</RelativeLayout>
